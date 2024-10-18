@@ -95,42 +95,42 @@ export const PsychoItem = ({ psychologist, onAppointmentClick }) => {
               src={`${IMAGE_BASE_URL}/svg/online.svg`}
               width="14"
               height="14"
-              alt="online"
+              alt="онлайн"
             />
             <PsychoAvatar
               src={avatar_url}
               width="96"
               height="96"
-              alt="psychologistphoto"
+              alt="фото психолога"
             />
           </AvatarWrapper>
           <MobilePsychoContainer>
-            <CardTitle>Psychologist</CardTitle>
+            <CardTitle>Психолог</CardTitle>
             <Name>{name}</Name>
           </MobilePsychoContainer>
         </AvatarContainer>
         <div>
           <DesktopPsychoContainer>
-            <CardTitle>Psychologist</CardTitle>
+            <CardTitle>Психолог</CardTitle>
             <Name>{name}</Name>
           </DesktopPsychoContainer>
           <ExpertiseList>
             <ExpertiseItem>
-              Experience: <span>{experience}</span>
+              Досвід: <span>{experience}</span>
             </ExpertiseItem>
             <ExpertiseItem>
-              License: <span>{license}</span>
+              Ліцензія: <span>{license}</span>
             </ExpertiseItem>
             <ExpertiseItem>
-              Specialization: <span>{specialization}</span>
+              Спеціалізація: <span>{specialization}</span>
             </ExpertiseItem>
             <ExpertiseItem>
-              Initial consultation: <span>{initial_consultation}</span>
+              Початкова консультація: <span>{initial_consultation}</span>
             </ExpertiseItem>
           </ExpertiseList>
           <Desc>{about}</Desc>
           <ExpendedBtn onClick={handleReadMore} type="button">
-            {expanded ? 'Show Less' : 'Read More'}
+            {expanded ? 'Менше' : 'Детальніше'}
           </ExpendedBtn>
           {expanded && (
             <div>
@@ -149,7 +149,7 @@ export const PsychoItem = ({ psychologist, onAppointmentClick }) => {
                           <ReviewUserRatingContainer>
                             <img
                               src={`${IMAGE_BASE_URL}/svg/star.svg`}
-                              alt="star"
+                              alt="зірка"
                               width="16"
                               height="16"
                             />
@@ -166,7 +166,7 @@ export const PsychoItem = ({ psychologist, onAppointmentClick }) => {
                 type="button"
                 onClick={() => onAppointmentClick(psychologist)}
               >
-                Make an appointment
+                Записатися на прийом
               </AppoBtn>
             </div>
           )}
@@ -175,16 +175,16 @@ export const PsychoItem = ({ psychologist, onAppointmentClick }) => {
           <FlexRating>
             <StarIcon
               src={`${IMAGE_BASE_URL}/svg/star.svg`}
-              alt="star"
+              alt="зірка"
               width="16"
               height="16"
             />
-            <RatingTitle>Rating: {rating}</RatingTitle>
+            <RatingTitle>Рейтинг: {rating}</RatingTitle>
           </FlexRating>
           <RatingDecor>|</RatingDecor>
           <PriceContainer>
             <Price>
-              Price / 1 hour: <span>{price_per_hour}$</span>
+              Ціна / 1 година: <span>{price_per_hour}$</span>
             </Price>
           </PriceContainer>
           <div>
@@ -192,14 +192,14 @@ export const PsychoItem = ({ psychologist, onAppointmentClick }) => {
               {isFavorite ? (
                 <img
                   src={`${IMAGE_BASE_URL}/svg/heart-fill.svg`}
-                  alt="star"
+                  alt="заповнене серце"
                   width="26"
                   height="26"
                 />
               ) : (
                 <img
                   src={`${IMAGE_BASE_URL}/svg/heart-empty.svg`}
-                  alt="star"
+                  alt="порожнє серце"
                   width="26"
                   height="26"
                 />

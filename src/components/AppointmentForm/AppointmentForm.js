@@ -60,11 +60,11 @@ export const AppointmentForm = ({ psychologist, onClose }) => {
 
   return (
     <div>
-      <ModalTitle>Make an appointment with a psychologist</ModalTitle>
+      <ModalTitle>Записатися на прийом до психолога</ModalTitle>
       <ModalDesc>
-        You are on the verge of changing your life for the better. Fill out the
-        short form below to book your personal appointment with a professional
-        psychologist. We guarantee confidentiality and respect for your privacy.
+        Ви на порозі змін у своєму житті на краще. Заповніть коротку форму
+        нижче, щоб забронювати особисту зустріч з професійним психологом. Ми
+        гарантуємо конфіденційність і повагу до вашої приватності.
       </ModalDesc>
       <PsychologistContainer>
         <PsychologistImage
@@ -74,13 +74,13 @@ export const AppointmentForm = ({ psychologist, onClose }) => {
           height="96"
         />
         <NameContainer>
-          <NameSubtitle>Your psychologist</NameSubtitle>
+          <NameSubtitle>Ваш психолог</NameSubtitle>
           <PsychologistName>{psychologist.name}</PsychologistName>
         </NameContainer>
       </PsychologistContainer>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <Input type="text" {...register('name')} placeholder="Name" />
+          <Input type="text" {...register('name')} placeholder="Ім'я" />
           {errors.name && <AttentionForm>{errors.name.message}</AttentionForm>}
         </div>
         <PhoneTimeContainer>
@@ -103,18 +103,22 @@ export const AppointmentForm = ({ psychologist, onClose }) => {
           </TimeContainer>
         </PhoneTimeContainer>
         <div>
-          <Input type="email" {...register('email')} placeholder="Email" />
+          <Input
+            type="email"
+            {...register('email')}
+            placeholder="Електронна пошта"
+          />
           {errors.email && (
             <AttentionForm>{errors.email.message}</AttentionForm>
           )}
         </div>
         <div>
-          <CommentInput {...register('comment')} placeholder="Comment" />
+          <CommentInput {...register('comment')} placeholder="Коментар" />
           {errors.comment && (
             <AttentionForm>{errors.comment.message}</AttentionForm>
           )}
         </div>
-        <SendBtn type="submit">Submit</SendBtn>
+        <SendBtn type="submit">Надіслати</SendBtn>
       </form>
     </div>
   );

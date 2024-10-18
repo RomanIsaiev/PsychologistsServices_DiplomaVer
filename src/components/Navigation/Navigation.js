@@ -6,18 +6,18 @@ export const Navigation = ({ currentUser }) => {
       <NavList>
         <li>
           <StyledNavLink to="/" activeclassname="active">
-            Home
+            Головна
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/psychologists" activeclassname="active">
-            Psychologists
+            Психологи
           </StyledNavLink>
         </li>
         {currentUser && (
           <li>
             <StyledNavLink to="/favorites" activeclassname="active">
-              Favorites
+              Обране
             </StyledNavLink>
           </li>
         )}

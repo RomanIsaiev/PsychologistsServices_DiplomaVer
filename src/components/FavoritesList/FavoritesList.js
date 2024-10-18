@@ -69,7 +69,7 @@ export const FavoritesList = () => {
   return (
     <div className="container">
       {favorites.length === 0 ? (
-        <NoFavorite>No favorite psychologists.</NoFavorite>
+        <NoFavorite>Немає улюблених психологів.</NoFavorite>
       ) : (
         <>
           <Filter

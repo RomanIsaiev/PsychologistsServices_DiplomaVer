@@ -81,8 +81,8 @@ export const Header = ({ openModal, closeModal }) => {
         {!isMobile && (
           <NavigationAuthContainer>
             <Logo to="/">
-              psychologists<span>.</span>
-              <span>services</span>
+              послуги<span>.</span>
+              <span>психолога</span>
             </Logo>
             <Navigation currentUser={currentUser} />
             {currentUser ? (
@@ -93,7 +93,7 @@ export const Header = ({ openModal, closeModal }) => {
                       currentUser.photoURL ||
                       `${IMAGE_BASE_URL}/default/default-avatar.png`
                     }
-                    alt="User Avatar"
+                    alt="Аватар користувача"
                     width="40"
                     height="40"
                   />
@@ -106,7 +106,7 @@ export const Header = ({ openModal, closeModal }) => {
                       handleLogout();
                     }}
                   >
-                    Log out
+                    Вийти
                   </ButtonLoginLogout>
                 </div>
               </AuthBox>
@@ -118,7 +118,7 @@ export const Header = ({ openModal, closeModal }) => {
                     openLoginModal();
                   }}
                 >
-                  Log in
+                  Увійти
                 </ButtonLoginLogout>
                 <ButtonRegister
                   type="button"
@@ -126,7 +126,7 @@ export const Header = ({ openModal, closeModal }) => {
                     openRegistrationModal();
                   }}
                 >
-                  Registration
+                  Реєстрація
                 </ButtonRegister>
               </ButtonsBox>
             )}
@@ -134,8 +134,8 @@ export const Header = ({ openModal, closeModal }) => {
         )}
 
         <LogoMobile to="/">
-          psychologists<span>.</span>
-          <span>services</span>
+          психолог<span>.</span>
+          <span>послуги</span>
         </LogoMobile>
         {isMobile && (
           <Menu
@@ -146,11 +146,14 @@ export const Header = ({ openModal, closeModal }) => {
             customBurgerIcon={
               <img
                 src={`${IMAGE_BASE_URL}/svg/hamburger.svg`}
-                alt="mobile menu"
+                alt="мобільне меню"
               />
             }
             customCrossIcon={
-              <img src={`${IMAGE_BASE_URL}/svg/close-modal.svg`} alt="close" />
+              <img
+                src={`${IMAGE_BASE_URL}/svg/close-modal.svg`}
+                alt="закрити"
+              />
             }
           >
             <NavigationAuthContainer>
@@ -163,7 +166,7 @@ export const Header = ({ openModal, closeModal }) => {
                         currentUser.photoURL ||
                         `${IMAGE_BASE_URL}/default/default-avatar.png`
                       }
-                      alt="User Avatar"
+                      alt="Аватар користувача"
                       width="40"
                       height="40"
                     />
@@ -176,7 +179,7 @@ export const Header = ({ openModal, closeModal }) => {
                         handleLogout();
                       }}
                     >
-                      Log out
+                      Вийти
                     </ButtonLoginLogout>
                   </div>
                 </AuthBox>
@@ -188,7 +191,7 @@ export const Header = ({ openModal, closeModal }) => {
                       openLoginModal();
                     }}
                   >
-                    Login
+                    Увійти
                   </ButtonLoginLogout>
                   <ButtonRegister
                     type="button"
@@ -196,7 +199,7 @@ export const Header = ({ openModal, closeModal }) => {
                       openRegistrationModal();
                     }}
                   >
-                    Registration
+                    Реєстрація
                   </ButtonRegister>
                 </ButtonsBox>
               )}

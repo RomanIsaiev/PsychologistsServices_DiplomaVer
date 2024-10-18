@@ -82,10 +82,10 @@ export const Login = ({ onClose }) => {
 
   return (
     <div>
-      <ModalTitle>Login</ModalTitle>
+      <ModalTitle>Увійти</ModalTitle>
       <ModalDesc>
-        Welcome back! Please enter your credentials to access your account and
-        continue your search for a psychologist.
+        Ласкаво просимо назад! Будь ласка, введіть свої облікові дані, щоб
+        отримати доступ до свого акаунту та продовжити пошук психолога.
       </ModalDesc>
       <ModalForm onSubmit={handleSubmit(onSubmit)}>
         <div>
@@ -93,7 +93,7 @@ export const Login = ({ onClose }) => {
             id="email-address"
             {...register('email')}
             type="email"
-            placeholder="Email"
+            placeholder="Електронна пошта"
           />
           {errors.email && (
             <AttentionForm>{errors.email.message}</AttentionForm>
@@ -104,20 +104,20 @@ export const Login = ({ onClose }) => {
             id="password"
             {...register('password')}
             type={showPassword ? 'text' : 'password'}
-            placeholder="Password"
+            placeholder="Пароль"
           />
           <EyeButton type="button" onClick={togglePasswordVisibility}>
             {showPassword ? (
               <EyeIcon
                 src={`${IMAGE_BASE_URL}/svg/eye-on.svg`}
-                alt="hide password"
+                alt="приховати пароль"
                 width="20"
                 height="20"
               />
             ) : (
               <EyeIcon
                 src={`${IMAGE_BASE_URL}/svg/eye-off.svg`}
-                alt="show password"
+                alt="показати пароль"
                 width="20"
                 height="20"
               />
@@ -127,7 +127,7 @@ export const Login = ({ onClose }) => {
             <AttentionForm>{errors.password.message}</AttentionForm>
           )}
         </PasswordBox>
-        <ModalButton type="submit">Log in</ModalButton>
+        <ModalButton type="submit">Увійти</ModalButton>
       </ModalForm>
     </div>
   );

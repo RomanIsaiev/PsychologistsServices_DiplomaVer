@@ -26,16 +26,19 @@ export const HomePage = () => {
         <HomeFlex>
           <div>
             <HomeTitle>
-              The road to the <span>depths</span> of the human soul
+              Дорога до <span>глибин</span> людської душі
             </HomeTitle>
             <HomeDesc>
-              We help you to reveal your potential, overcome challenges and find
-              a guide in your own life with the help of our experienced
-              psychologists.
+              Ми допомагаємо розкрити ваш потенціал, подолати виклики та знайти
+              свого провідника у власному житті за допомогою наших досвідчених
+              психологів.
             </HomeDesc>
             <StartButton to="/psychologists">
-              Get started
-              <img src={`${IMAGE_BASE_URL}/svg/buton-arrow.svg`} alt="arrow" />
+              Почати
+              <img
+                src={`${IMAGE_BASE_URL}/svg/buton-arrow.svg`}
+                alt="стрілка"
+              />
             </StartButton>
           </div>
           <ExpContainer>
@@ -43,13 +46,13 @@ export const HomePage = () => {
               <ExpIconBox>
                 <ExpIcon
                   src={`${IMAGE_BASE_URL}/svg/check-mark-orange.svg`}
-                  alt="check-mark"
+                  alt="позначка"
                   width="30"
                   height="30"
                 />
               </ExpIconBox>
               <ExpInfoBox>
-                <ExpText>Experienced psychologists</ExpText>
+                <ExpText>Досвідчені психологи</ExpText>
                 <ExpNumber>15,000</ExpNumber>
               </ExpInfoBox>
             </ExpBlock>
@@ -57,7 +60,7 @@ export const HomePage = () => {
               <PeopleIconBox>
                 <PeopleIcon
                   src={`${IMAGE_BASE_URL}/svg/people.svg`}
-                  alt="people icon"
+                  alt="іконка людей"
                   width="20"
                   height="20"
                 />
@@ -65,7 +68,7 @@ export const HomePage = () => {
               <QuestionIconBox>
                 <QuestionIcon
                   src={`${IMAGE_BASE_URL}/svg/question-sign.svg`}
-                  alt="question sign icon"
+                  alt="знак питання"
                   width="10"
                   height="17"
                 />
@@ -78,7 +81,7 @@ export const HomePage = () => {
                 />
                 <MainImage
                   src={`${IMAGE_BASE_URL}/homepage/woman-desktop-1x.jpg`}
-                  alt="women"
+                  alt="жінка"
                   width="464"
                   height="526"
                 />

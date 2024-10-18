@@ -88,10 +88,10 @@ export const Signup = ({ onClose }) => {
 
   return (
     <div>
-      <ModalTitle>Registration</ModalTitle>
+      <ModalTitle>Реєстрація</ModalTitle>
       <ModalDesc>
-        Thank you for your interest in our platform! In order to register, we
-        need some information. Please provide us with the following information.
+        Дякуємо за ваш інтерес до нашої платформи! Для реєстрації нам потрібна
+        деяка інформація. Будь ласка, надайте нам наступні дані.
       </ModalDesc>
       <ModalForm onSubmit={handleSubmit(onSubmit)}>
         <div>
@@ -99,7 +99,7 @@ export const Signup = ({ onClose }) => {
             id="user-name"
             type="text"
             {...register('name')}
-            placeholder="Name"
+            placeholder="Ім'я"
           />
           {errors.name && <AttentionForm>{errors.name.message}</AttentionForm>}
         </div>
@@ -108,7 +108,7 @@ export const Signup = ({ onClose }) => {
             id="email-address"
             type="email"
             {...register('email')}
-            placeholder="Email"
+            placeholder="Електронна пошта"
           />
           {errors.email && (
             <AttentionForm>{errors.email.message}</AttentionForm>
@@ -119,20 +119,20 @@ export const Signup = ({ onClose }) => {
             id="password"
             type={showPassword ? 'text' : 'password'}
             {...register('password')}
-            placeholder="Password"
+            placeholder="Пароль"
           />
           <EyeButton type="button" onClick={togglePasswordVisibility}>
             {showPassword ? (
               <EyeIcon
                 src={`${IMAGE_BASE_URL}/svg/eye-on.svg`}
-                alt="hide password"
+                alt="приховати пароль"
                 width="20"
                 height="20"
               />
             ) : (
               <EyeIcon
                 src={`${IMAGE_BASE_URL}/svg/eye-off.svg`}
-                alt="show password"
+                alt="показати пароль"
                 width="20"
                 height="20"
               />
@@ -142,7 +142,7 @@ export const Signup = ({ onClose }) => {
             <AttentionForm>{errors.password.message}</AttentionForm>
           )}
         </PasswordBox>
-        <ModalButton type="submit">Sign Up</ModalButton>
+        <ModalButton type="submit">Зареєструватися</ModalButton>
       </ModalForm>
     </div>
   );

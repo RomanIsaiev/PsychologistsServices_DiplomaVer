@@ -73,13 +73,13 @@ const TimePicker = ({ onChange }) => {
             src={`${IMAGE_BASE_URL}/svg/clock.svg`}
             width="20"
             height="20"
-            alt="arrow"
+            alt="годинник"
           />
         </PickerTitle>
       </PickerContainer>
       {isClockPickerOpen && (
         <OptionsList>
-          <OptionsTitle>Meeting time</OptionsTitle>
+          <OptionsTitle>Час зустрічі</OptionsTitle>
           <TimeListsContainer>
             <TimeList>
               {times.map((time, index) => (

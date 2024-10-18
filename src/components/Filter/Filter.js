@@ -17,14 +17,15 @@ const Filter = ({ isOpen, onToggle }) => {
   const IMAGE_BASE_URL = process.env.PUBLIC_URL + '/images';
 
   const filterOptions = [
-    { label: 'All', value: 'all' },
-    { label: 'Name A-Z', value: 'name_asc' },
-    { label: 'Name Z-A', value: 'name_desc' },
-    { label: 'Price High to Low', value: 'price_high_low' },
-    { label: 'Price Low to High', value: 'price_low_high' },
-    { label: 'Popular', value: 'popular' },
-    { label: 'Not Popular', value: 'not_popular' },
+    { label: 'Всі', value: 'all' },
+    { label: "Ім'я А-Я", value: 'name_asc' },
+    { label: "Ім'я Я-А", value: 'name_desc' },
+    { label: 'Ціна від високої до низької', value: 'price_high_low' },
+    { label: 'Ціна від низької до високої', value: 'price_low_high' },
+    { label: 'Популярні', value: 'popular' },
+    { label: 'Непопулярні', value: 'not_popular' },
   ];
+
   const filterRef = useRef(null);
 
   const handleSortChange = value => {
@@ -50,7 +51,7 @@ const Filter = ({ isOpen, onToggle }) => {
 
   return (
     <FilterContainer ref={filterRef}>
-      <FilterTitle>Filter</FilterTitle>
+      <FilterTitle>Фільтр</FilterTitle>
       <LabelArea onClick={onToggle}>
         <Label>
           {filterOptions.find(option => option.value === sortBy).label}
@@ -59,7 +60,7 @@ const Filter = ({ isOpen, onToggle }) => {
           src={`${IMAGE_BASE_URL}/svg/filterArrow.svg`}
           width="20"
           height="20"
-          alt="arrow"
+          alt="стрілка"
         />
       </LabelArea>
       {isOpen && (
