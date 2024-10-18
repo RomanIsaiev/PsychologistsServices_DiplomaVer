@@ -108,7 +108,7 @@ export const PsychoList = () => {
         ))}
       </PsychoStyledList>
       {currentPage * itemsPerPage < loadedPsychologists.length && (
-        <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
+        <LoadMoreBtn onClick={handleLoadMore}>Завантажити більше</LoadMoreBtn>
       )}
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={closeModal}>

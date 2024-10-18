@@ -13,8 +13,8 @@ export const LoadMoreBtn = styled.button`
 
   color: #fbfbfb;
   background: #fc832c;
-  padding: 14px 40px;
-  width: 176px;
+  padding: 14px 20px;
+  width: 226px;
   margin: 0 auto;
 `;
 
