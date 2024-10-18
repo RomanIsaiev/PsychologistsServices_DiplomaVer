@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RomanIsaiev.github.io/PsychologistsServices/",
+  "homepage": "https://RomanIsaiev.github.io/PsychologistsServices_DiplomaVer/",
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
     "@reduxjs/toolkit": "^2.2.5",
